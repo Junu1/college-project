@@ -1,0 +1,696 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.logo {
+    width: 250px;
+    height: 150px;
+}
+
+.logo img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+nav {
+    padding: 1rem;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+li {
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin: 0 1rem;
+}
+
+.navbar li button {
+    border: 0;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 0.5rem 0.75rem;
+    color: #E9605A;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    transform: scale(1.25);
+    transition: all .5s ease;
+    transition-duration: 0.75s;
+    color: #E9605A;
+    cursor: pointer;
+}
+
+nav ul li:last-child button:hover {
+    color: white;
+    cursor: pointer;
+    background-color: #E9605A;
+}
+
+section {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.greettext {
+    font-size: 35px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #E9605A;
+    margin-left: 2rem;
+}
+
+.form {
+    margin-left: 2rem;
+    margin-top: 2rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2rem;
+}
+
+label {
+    font-size: 14px;
+    padding-bottom: 0.75rem;
+}
+
+input {
+    border: 0;
+    width: 300px;
+    height: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+
+input[type="radio"] {
+    width: 30px;
+    height: 30px;
+    border: 0;
+    margin-left: 1rem;
+    margin-bottom: 0;
+}
+
+input[type="date"] {
+    background-color: #EDB5B6;
+    color: white;
+}
+
+select {
+    border: 0;
+    width: 300px;
+    height: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 1rem;
+    padding: 0 0.5rem;
+}
+
+.custom-select {
+    position: relative;
+}
+
+.custom-select select {
+    display: none;
+}
+
+.select-selected {
+    background-color: #EDB5B6;
+}
+
+.select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #fff transparent transparent transparent;
+}
+
+.select-selected.select-arrow-active:after {
+    border-color: transparent transparent #fff transparent;
+    top: 7px;
+}
+
+.select-items div, .select-selected {
+    color: #ffffff;
+    border-radius: 20px;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+    user-select: none;
+}
+
+/*style items (options):*/
+.select-items {
+    position: absolute;
+    background-color: #EDB5B6;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+    display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+input[type="submit"] {
+    background-color: #E9605A;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 0;
+}
+
+.forget {
+    font-size: 12px;
+    color: #BB0A1E;
+    text-align: center;
+}
+
+.heroimg {
+    width: 700px;
+    height: 600px;
+}
+
+i {
+    padding: 1rem 0;
+    margin: 0 .25rem;
+}
+
+.heroimg img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.social {
+    width: 300px;
+    text-align: center;
+    margin-left: 2rem;
+}
+
+.signup {
+    text-decoration: none;
+    color: #E9605A;
+}
+
+/* register page */
+
+.register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.register form {
+    display: flex;
+    justify-content: center
+}
+
+.register h1, .register p {
+    text-align: center;
+}
+
+.register p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.register h1 {
+    padding: 0 0 2rem 0;
+    font-size: 36px;
+    color: #EDB5B6;
+}
+
+input {
+    outline: none;
+}
+
+.register input {
+    padding: 1rem;
+    margin: 1rem;
+    background-color: #EDB5B6;
+    color: white;
+    font-size: 14px;
+}
+
+.register ::placeholder {
+    color: white;
+    opacity: 1;
+}
+
+.name input:nth-child(1), .name input:nth-child(2) {
+    width: 180px;
+}
+
+.mail, .pass {
+    width: 400px;
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+}
+
+.register form {
+    margin-left: 0;
+}
+
+.register button {
+    background-color: #E9605A;
+    width: 200px;
+    height: auto;
+    color: white;
+    font-size: 24px;
+    border: none;
+    border-radius: 20px;
+    text-align: center;
+    align-self: center;
+    padding: .5rem 0;
+}
+
+.bodyclass {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.circle1, .circle2, .circle3, .circle4, .circle5, .circle6 {
+    background: linear-gradient(180deg, rgba(187, 10, 30, 0.85) 0%, rgba(234, 167, 167, 0.77) 100%);
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+
+}
+
+.circle1 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(15%, -40%);
+}
+
+.circle2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(40%, 15%);
+}
+
+.circle3 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translate(30%, -20%);
+}
+
+.circle4 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translate(15%, 40%);
+}
+
+.circle5 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translate(-50%, -30%);
+}
+
+.circle6 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translate(-20%, 40%);
+}
+
+.copyright {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+}
+
+/* about us */
+
+#aboutus, #donorlist {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.aboutus h1, .donorlist h1 {
+    font-size: 36px;
+    padding: 0 0 2rem 0;
+    color: #E9605A;
+}
+
+.para {
+    width: 75%;
+    align-self: center;
+    text-align: left;
+    color: #E9605A;
+}
+
+.para p {
+    margin: .5rem 0;
+}
+
+/* donor list */
+.donortable {
+    align-self: center;
+}
+
+.donortable table {
+    background-color: #EDB5B6;
+    align-self: center;
+}
+
+th, td {
+    border: 3px solid white;
+}
+
+td, th {
+    padding: 1rem 3rem;
+}
+
+th, tr {
+    font-size: 24px;
+}
+
+/* lucy */
+
+.container {
+    padding: 3rem;
+}
+
+.username {
+    padding: 0 0 1rem 0;
+    font-size: 28px;
+}
+
+.emergency {
+    margin-top: 5rem;
+}
+
+.emergency a {
+    text-decoration: none;
+    background-color: #E9605A;
+    color: white;
+    padding: 1rem;
+}
+
+.greet h3 {
+    padding: 0.5rem 0;
+    font-size: 24px;
+}
+
+.mid-sec {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.blood-grp {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.blood-list form.blood-grp {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.blood-list form.blood-grp > div {
+    margin-right: 1rem;
+
+}
+
+.blood-grp .bg {
+    background-color: #E9605A;
+    padding: 0.5em;
+    margin: 1rem;
+    width: 20%;
+}
+
+.choose-blood {
+    padding: 2rem;
+}
+
+.choose-blood .blood-list .blood-grp .bg {
+    background-color: #E9605A;
+    padding: 0.5em;
+    margin: 1rem;
+    width: max-content;
+}
+
+.bg h1 {
+    text-align: center;
+}
+
+.location input {
+    margin-right: 1rem;
+
+}
+
+.custom-form p {
+    margin-left: 10px;
+}
+
+.location button {
+    width: 70px;
+    background-color: #E9605A;
+    border: none;
+    padding: 1rem;
+    border-radius: 30px;
+}
+
+.mid-sec .blood-list {
+    width: 50%;
+}
+
+.mid-sec .hero-img {
+    width: 60%;
+}
+
+.hero-img {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.hero-img img {
+    max-width: 450px;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* contact */
+.contact .greettext {
+    text-align: center;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-side form input, .form-side form textarea {
+    background-color: #EDB5B6;
+    font-weight: bold;
+    color: white;
+    border-radius: 8px;
+    width: 60%;
+    padding: 1rem;
+    margin: 1rem 0;
+    border: 0;
+}
+
+.form-side form button {
+    background-color: #E9605A;
+    width: 150px;
+    padding: 0.5rem 0;
+    border: 0;
+    font-size: 18px;
+    color: white !important;
+    text-align: center;
+    align-self: center;
+}
+
+.form-side form {
+    margin-left: 0;
+}
+
+.form-side {
+    padding: 0 1rem;
+    width: 40%;
+}
+
+.followus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.followus a {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0.5rem;
+}
+
+.followus i {
+    font-size: 30px;
+    padding: 0 0.5rem;
+}
+
+.contact-detail h3 {
+    font-size: 28px;
+}
+
+.pinky {
+    color: #E9605A;
+}
+
+.contact-body .greettext {
+    text-align: center;
+}
+
+.form-side-txt {
+    font-size: 20px;
+}
+
+.form-side-txt h5 {
+    margin-bottom: 1rem;
+}
+
+form.blood > div p {
+    margin-bottom: 0.5rem;
+}
+
+form.blood > div {
+    margin-bottom: 1rem;
+}
+
+.contact-body .copyright {
+    position: absolute;
+    right: 20px;
+    bottom: unset !important;
+}
+
+.followus .fa-facebook {
+    color: #3b5998;
+}
+
+.followus .fa-instagram {
+    background: #d6249f;
+    color: #fff;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+.followus .fa-twitter {
+    color: #00acee;
+}
+
+/* donatnow */
+
+.gender-choose {
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+}
+
+.gender-choose label {
+    padding: 0;
+}
+
+.gender-wrapper {
+    display: flex;
+
+}
+
+input[type=radio]:checked {
+    background: #EDB5B6;
+}
+
+.blood-grp input[type=radio],
+.blood-grp input[type=checkbox] {
+    display: none;
+}
+
+form input[type="radio"]:checked + label {
+    background-color: #EDB5B6;
+}
+
+.choose-bg {
+    padding: 3rem 1rem 1rem 3rem;
+}
+
+.blood-grp > div label {
+    display: block;
+    appearance: button;
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    -ms-appearance: button;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    background: #DDDDDD;
+    font-size: 1.6rem;
+    color: #111111;
+    border: 2px solid #AAAAAA;
+    padding: 8px;
+    width: 70px;
+    margin: 0 auto;
+    text-align: center;
+    cursor: pointer;
+}
+
+.blood-grp div:last-child label:last-child {
+    width: 105px;
+}

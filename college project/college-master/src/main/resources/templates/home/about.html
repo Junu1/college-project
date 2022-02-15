@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      lang="en">
+<head>
+    <title>About</title>
+    <link th:href="@{/css/style.css}" rel="stylesheet" />
+</head>
+<body>
+<header>
+    <div class="logo">
+        <a th:href="@{/home}"><img th:src="@{/images/logo.png}" alt="Logo"></a>
+    </div>
+    <nav>
+        <ul class="navbar">
+            <a th:href="@{/about}">
+                <li>About Us</li>
+            </a>
+            <a th:href="@{/donor}">
+                <li>Donor List</li>
+            </a>
+            <a th:href="@{/contact}">
+                <li>Conatct</li>
+            </a>
+            <a th:href="@{/donate}">
+                <li>
+                    <button>Donate Now</button>
+                </li>
+            </a>
+            <a th:href="@{/logout}">
+                <li>
+                    <button>Logout</button>
+                </li>
+            </a>
+        </ul>
+    </nav>
+</header>
+<section id="aboutus">
+    <div class="aboutus">
+        <h1>About Us</h1>
+    </div>
+    <div class="para">
+        <p>A Blood donation service is essential part of health care delivery system. Every government has a
+            responsibility to ensure accessibility, availability, and safety of blood supply for its people.</p>
+        <p> This system helps you to find a more efficient way in blood donor database management and to create a medium
+            for people to get connected with potential blood donors around the locality. This system also includes the
+            plasma blood donation which helps to treat different kinds of serious health problems which includes
+            antibodies and chemicals that helps the blood to clot and can help in medical emergencies.</p>
+
+
+    </div>
+</section>
+<p class="copyright">&copy; 2021 Share Blood Team ~ All Right Reserved ~ Privacy Policy</p>
+</body>
+</html>

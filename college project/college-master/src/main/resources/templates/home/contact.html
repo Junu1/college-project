@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      lang="en">
+
+<head>
+    <title>Contact</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+          integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+          crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link th:href="@{/css/style.css}" rel="stylesheet"/>
+</head>
+
+<body class="contact-body">
+<header>
+    <div class="logo">
+        <a th:href="@{/home}"><img th:src="@{/images/logo.png}" alt="Logo"></a>
+    </div>
+    <nav>
+        <ul class="navbar">
+            <a th:href="@{/about}">
+                <li>About Us</li>
+            </a>
+            <a th:href="@{/donor}">
+                <li>Donor List</li>
+            </a>
+            <a th:href="@{/contact}">
+                <li>Conatct</li>
+            </a>
+            <a th:href="@{/donate}">
+                <li>
+                    <button>Donate Now</button>
+                </li>
+            </a>
+            <a th:href="@{/logout}">
+                <li>
+                    <button>Logout</button>
+                </li>
+            </a>
+        </ul>
+    </nav>
+</header>
+<h1 class="greettext">Let's Connect</h1>
+<section class="contact">
+    <div class="mid-sec">
+        <div class="form-side">
+            <div class="alert alert-success" role="alert" th:if="${msg}" th:utext="${msg}">
+            </div>
+            <div class="form-side-txt">
+                <h5>We'd love to help you!</h5>
+                <h5>If you have any queries, suggestions, views or lacking <br> blood please fill the form below </h5>
+            </div>
+            <form role="form" method="POST" th:action="@{/contact}" th:object="${contact}">
+                <input type="text" th:field="*{name}" name="fullname" id="fn" placeholder="Full Name" required autofocus>
+                <input type="email" th:field="*{email}" name="email" id="email" placeholder="Email Address" required autofocus>
+                <input type="text" maxlength="10" th:field="*{contactNumber}" name="contactno" id="contact" placeholder="Contact Number" required autofocus>
+                <textarea name="msg" placeholder="feedback" maxlength="200" th:field="*{message}" id="msg" cols="5" rows="5" required autofocus>Message</textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div class="hero-img">
+            <img th:src="@{/images/20943953.jpg}" alt="img">
+            <div class="contact-detail">
+                <h3 class="pinky">Contact Detail</h3>
+                <p><i class="fas fa-phone-square-alt"></i>+9779810000000</p>
+                <p><i class="fas fa-envelope-open-text"></i>shareblood01@gmail.com</p>
+                <p><i class="fas fa-map-marker-alt"></i>Biratnagar-5</p>
+            </div>
+        </div>
+    </div>
+    <div class="followus">
+        <h1 class="pinky">Follow us on:</h1>
+        <a href="http://"><i class="fab fa-facebook"></i></a>
+        <a href="http://"><i class="fab fa-instagram"></i></a>
+        <a href="http://"><i class="fab fa-twitter"></i></a>
+    </div>
+</section>
+<p class="copyright">&copy; 2021 Share Blood Team ~ All Right Reserved ~ Privacy Policy</p>
+</body>
+
+</html>

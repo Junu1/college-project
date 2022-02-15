@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      lang="en">
+<head>
+    <title>Home</title>
+    <link th:href="@{/css/style.css}" rel="stylesheet" />
+</head>
+<body>
+<header>
+    <div class="logo">
+        <a th:href="@{/home}">
+            <img th:src="@{/images/logo.png}" alt="Logo"></a>
+    </div>
+    <nav>
+        <ul class="navbar">
+            <a th:href="@{/about}">
+                <li>About Us</li>
+            </a>
+            <a th:href="@{/donor}">
+                <li>Donor List</li>
+            </a>
+            <a th:href="@{/contact}">
+                <li>Conatct</li>
+            </a>
+            <a th:href="@{/donate}">
+                <li>
+                    <button>Donate Now</button>
+                </li>
+            </a>
+
+            <a th:href="@{/logout}">
+                <li>
+                    <button>Logout</button>
+                </li>
+            </a>
+        </ul>
+    </nav>
+</header>
+<section id="donorlist">
+    <div class="donorlist">
+        <h1>Donor List</h1>
+    </div>
+    <div class="donortable">
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Gender</th>
+                <th>Address</th>
+                <th>Contact.No</th>
+                <th>Group</th>
+                <th>Age</th>
+            </tr>
+            <tr th:each="donor: ${donorList}">
+                <td th:text="${donor.fullName}"></td>
+                <td th:text="${donor.gender}"></td>
+                <td th:text="${donor.address}"></td>
+                <td th:text="${donor.contactNumber}"></td>
+                <td th:text="${donor.group}"></td>
+                <td th:text="${donor.age}"></td>
+            </tr>
+        </table>
+    </div>
+</section>
+<p class="copyright">&copy; 2021 Share Blood Team ~ All Right Reserved ~ Privacy Policy</p>
+</body>
+</html>
